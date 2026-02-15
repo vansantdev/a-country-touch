@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A Country Touch | Contact</title>
+
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -25,20 +27,69 @@
 
   <p>
     Email:
-    <a href="mailto:acountrytouch@yahoo.com">
+    <a href="mailto:acountrytouch@yahoo.com" class="social-link">
       acountrytouch@yahoo.com
     </a>
   </p>
 
- <p>
-  Facebook:
-  <a class="social-link"
-     href="https://www.facebook.com/acountrydesign"
-     target="_blank">
-    <i class="fa-brands fa-facebook"></i>
-    A Country Touch on Facebook
-  </a>
-</p>
+  <p>
+    Facebook:
+    <a href="https://www.facebook.com/acountrydesign"
+       target="_blank"
+       rel="noopener"
+       class="social-link">
+      <i class="fa-brands fa-facebook"></i>
+      A Country Touch
+    </a>
+  </p>
+
+  <hr>
+
+  <h3>Request a Custom Order</h3>
+
+  <form class="form"
+        action="https://formsubmit.co/acountrytouch@yahoo.com"
+        method="POST">
+
+    <!-- spam protection -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- redirect after submit -->
+    <input type="hidden"
+           name="_next"
+           value="https://vansantdev.github.io/a-country-touch/contact.html">
+
+    <label>
+      Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Project Type
+      <select name="project">
+        <option>Woodworking</option>
+        <option>Tumblers</option>
+        <option>3D Printing</option>
+        <option>Custom Build</option>
+      </select>
+    </label>
+
+    <label>
+      Details
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+
+    <button type="submit" class="btn">Send Request</button>
+  </form>
+
+  <p class="small">
+    We typically respond within 1–2 business days.
+  </p>
 </main>
 
 </body>
