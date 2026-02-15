@@ -429,3 +429,16 @@ nav a:hover {
 .slide-btn:hover{
   background:#ff00cc;
 }
+/* Lightbox opens with .open instead of :target */
+.lightbox { display: none; }
+.lightbox.open { display: flex; }
+
+/* Make portfolio "button cards" look like links */
+.portfolio-link{
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
