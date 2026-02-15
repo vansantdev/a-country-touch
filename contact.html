@@ -1,56 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0LCH8S34B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G0LCH8S34B');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>A Country Touch | Contact</title>
-  <meta name="description" content="Contact A Country Touch for custom orders, questions, and quotes." />
+  <meta name="description" content="Contact A Country Touch for custom woodworking, tumblers, and 3D printed creations.">
 
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LCH8S34B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LCH8S34B');
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <h1>A Country Touch</h1>
 
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<header class="site-header">
+  <h1>A Country Touch</h1>
 
-    <nav class="nav-menu" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="order.html">Custom Order</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
-  <main class="page">
-    <h2>Contact</h2>
+  <nav class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="order.html">Custom Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-    <p>Email:
-      <a class="social-link" href="mailto:acountrytouch@yahoo.com">acountrytouch@yahoo.com</a>
-    </p>
+<main class="page">
+  <h2>Contact Us</h2>
+  <p>Have a question or custom idea? Send us a message below.</p>
 
-    <p>
-      Facebook:
-      <a class="social-link" href="https://www.facebook.com/acountrydesign" target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook"></i> A Country Touch
-      </a>
-    </p>
+  <form action="https://formsubmit.co/dunklehass14@gmail.com" method="POST" class="form">
 
-    <h3>Send a message</h3>
+    <input type="hidden" name="_subject" value="New Contact Form Submission - A Country Touch">
+    <input type="hidden" name="_captcha" value="false">
 
-    <form class="form" action="https://formsubmit.co/acountrytouch@yahoo.com" method="POST">
-      <input type="hidden" name="_subject" value="New Message - A Country Touch" />
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- ✅ REQUIRED PHONE -->
+    <label for="phone">Phone Number *</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+      placeholder="(555) 555-5555"
+      autocomplete="tel"
+      pattern="^[0-9()+\-\s]{7,}$"
+      title="Please enter a valid phone number">
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <p class="small">
+    <a href="https://www.facebook.com/acountrydesign" target="_blank" class="social-link">
+      <i class="fab fa-facebook"></i> Visit us on Facebook
+    </a>
+  </p>
+</main>
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-menu');
+
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+}
+</script>
+
+</body>
+</html>
