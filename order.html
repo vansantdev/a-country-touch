@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>A Country Touch | Custom Orders</title>
-  <meta name="description" content="Request a custom handmade piece from A Country Touch.">
+  <title>A Country Touch | Custom Order</title>
+  <meta name="description" content="Request a custom order from A Country Touch. Woodworking, tumblers, 3D prints, decals, and more." />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LCH8S34B"></script>
@@ -16,77 +16,129 @@
     gtag('config', 'G-0LCH8S34B');
   </script>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-<header class="site-header">
-  <h1>A Country Touch</h1>
+  <header class="site-header">
+    <h1>A Country Touch</h1>
 
-  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-  <nav class="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="order.html">Custom Order</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main class="page">
-  <h2>Request a Custom Order</h2>
+  <main class="page">
+    <h2>Custom Order Request</h2>
+    <p class="muted">
+      Tell us what you’d like made and we’ll reach out with any questions, pricing, and a timeline.
+    </p>
 
-  <form action="https://formsubmit.co/dunklehass14@gmail.com" method="POST" class="form">
+    <!-- FormSubmit -->
+    <form class="form" action="https://formsubmit.co/dunklehass14@gmail.com" method="POST">
+      <!-- FormSubmit options -->
+      <input type="hidden" name="_subject" value="New Custom Order Request - A Country Touch" />
+      <input type="hidden" name="_captcha" value="false" />
 
-    <input type="hidden" name="_subject" value="New Custom Order - A Country Touch">
-    <input type="hidden" name="_captcha" value="false">
+      <label for="name">
+        Your Name *
+        <input type="text" id="name" name="name" required />
+      </label>
 
-    <label for="name">Name *</label>
-    <input type="text" id="name" name="name" required>
+      <label for="email">
+        Email *
+        <input type="email" id="email" name="email" required />
+      </label>
 
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="email" required>
+      <!-- ✅ REQUIRED PHONE -->
+      <label for="phone">
+        Phone Number *
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="(555) 555-5555"
+          autocomplete="tel"
+          pattern="^[0-9()+\-\s]{7,}$"
+          title="Please enter a valid phone number"
+        />
+      </label>
 
-    <!-- ✅ REQUIRED PHONE -->
-    <label for="phone">Phone Number *</label>
-    <input
-      type="tel"
-      id="phone"
-      name="phone"
-      required
-      placeholder="(555) 555-5555"
-      autocomplete="tel"
-      pattern="^[0-9()+\-\s]{7,}$"
-      title="Please enter a valid phone number">
+      <label for="category">
+        What are you ordering? *
+        <select id="category" name="category" required>
+          <option value="">Select one</option>
+          <option value="Woodworking">Woodworking</option>
+          <option value="Tumblers/Drinkware">Tumblers / Drinkware</option>
+          <option value="3D Prints">3D Prints</option>
+          <option value="Laser/Engraving">Laser / Engraving</option>
+          <option value="Decals/Stickers">Decals / Stickers</option>
+          <option value="Metal/Wind Spinners">Metal / Wind Spinners</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
 
-    <label for="type">What are you looking for?</label>
-    <select id="type" name="type">
-      <option>Custom Woodworking</option>
-      <option>Personalized Tumbler</option>
-      <option>3D Printed Item</option>
-      <option>Laser Engraving</option>
-      <option>Other</option>
-    </select>
+      <label for="description">
+        Project Description (be specific) *
+        <textarea
+          id="description"
+          name="description"
+          rows="6"
+          placeholder="Sizes, names, colors, theme, text, logo, etc."
+          required
+        ></textarea>
+      </label>
 
-    <label for="details">Project Details *</label>
-    <textarea id="details" name="details" rows="5" required></textarea>
+      <label for="deadline">
+        Deadline / Needed by (optional)
+        <input
+          type="text"
+          id="deadline"
+          name="deadline"
+          placeholder="Example: March 15 or 'no rush'"
+        />
+      </label>
 
-    <button type="submit" class="btn">Submit Custom Request</button>
-  </form>
-</main>
+      <label for="budget">
+        Budget Range (optional)
+        <select id="budget" name="budget">
+          <option value="">Select one</option>
+          <option value="Under $25">Under $25</option>
+          <option value="$25 to $75">$25 to $75</option>
+          <option value="$75 to $150">$75 to $150</option>
+          <option value="$150+">$150+</option>
+        </select>
+      </label>
 
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-menu');
+      <button class="btn" type="submit">Send Request</button>
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-}
-</script>
+      <p class="small">
+        After you submit, you may see a confirmation page. If you don’t hear back within 24–48 hours,
+        please message us on Facebook.
+      </p>
+    </form>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+      });
+    }
+  </script>
 
 </body>
 </html>
