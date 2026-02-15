@@ -6,232 +6,219 @@
 
   <title>A Country Touch | Portfolio</title>
   <meta name="description"
-        content="Browse examples of our work — custom woodworking, tumblers, and 3D printed designs from A Country Touch.">
+        content="Browse examples of our custom woodworking, tumblers, and 3D printed designs from A Country Touch." />
 
   <!-- Open Graph (Facebook preview) -->
-  <meta property="og:title" content="A Country Touch | Portfolio">
-  <meta property="og:description" content="Examples of custom woodworking, tumblers, and 3D printed designs made to order.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vansantdev.github.io/a-country-touch/portfolio.html">
+  <meta property="og:title" content="A Country Touch | Portfolio" />
+  <meta property="og:description" content="Examples of custom woodworking, tumblers, and 3D printed designs made to order." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vansantdev.github.io/a-country-touch/portfolio.html" />
 
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
+<body>
+  <header class="site-header">
+    <h1>A Country Touch</h1>
 
-<header>
-  <h1>A Country Touch</h1>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-  <!-- Hamburger button -->
-  <button class="menu-toggle" aria-label="Toggle menu">
-    ☰
-  </button>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <nav class="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="order.html">Custom Order</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <main class="page">
+    <h2>Our Work</h2>
+    <p>Click a category to view examples.</p>
 
+    <div class="portfolio-grid">
+      <!-- Woodworking -->
+      <a class="portfolio-link" href="#lb-wood">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/dressbench.jpg" alt="Woodworking preview" loading="lazy" />
+          <h3>Woodworking</h3>
+          <p>Custom wood signs, shelves, and home decor</p>
+        </div>
+      </a>
 
-<main class="page">
-  <h2>Our Work</h2>
-  <p>Click a category to view examples.</p>
+      <!-- Tumblers -->
+      <a class="portfolio-link" href="#lb-tumblers">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/multitumblers.jpg" alt="Tumblers preview" loading="lazy" />
+          <h3>Tumblers</h3>
+          <p>Personalized tumblers with names, logos, and colors</p>
+        </div>
+      </a>
 
-  <div class="portfolio-grid">
+      <!-- 3D Prints -->
+      <a class="portfolio-link" href="#lb-prints">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/3dprintedpokemon.jpg" alt="3D prints preview" loading="lazy" />
+          <h3>3D Prints</h3>
+          <p>Custom 3D printed designs — parts, gifts, prototypes</p>
+        </div>
+      </a>
 
-    <a class="portfolio-link" href="#lb-wood">
-      <div class="portfolio-item">
-        <div class="placeholder">Woodworking</div>
-        <p>Custom wood signs, shelves, and home decor</p>
-      </div>
-    </a>
-
-    <a class="portfolio-link" href="#lb-tumblers">
-      <div class="portfolio-item">
-        <div class="placeholder">Tumblers</div>
-        <p>Personalized tumblers with names, logos, and colors</p>
-      </div>
-    </a>
-
-    <a class="portfolio-link" href="#lb-prints">
-      <div class="portfolio-item">
-        <div class="placeholder">3D Prints</div>
-        <p>Custom 3D printed designs — parts, gifts, prototypes</p>
-      </div>
-    </a>
-
-    <a class="portfolio-link" href="#lb-custom">
-      <div class="portfolio-item">
-        <div class="placeholder">Custom Builds</div>
-        <p>Unique made-to-order projects built to your idea</p>
-      </div>
-    </a>
-
-  </div>
-</main>
-
-<!-- ========================= -->
-<!-- LIGHTBOX + SLIDERS -->
-<!-- ========================= -->
-
-<!-- WOODWORKING -->
-<div id="lb-wood" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <div class="lightbox-content">
-    <h3>Woodworking</h3>
-
-    <div class="slider" id="wood-slider">
-      <div id="wood1" class="slide">
-        <a class="arrow left" href="#wood4">❮</a>
-        <img src="images/wood1.jpg" alt="Woodworking example 1">
-        <a class="arrow right" href="#wood2">❯</a>
-      </div>
-
-      <div id="wood2" class="slide">
-        <a class="arrow left" href="#wood1">❮</a>
-        <img src="images/wood2.jpg" alt="Woodworking example 2">
-        <a class="arrow right" href="#wood3">❯</a>
-      </div>
-
-      <div id="wood3" class="slide">
-        <a class="arrow left" href="#wood2">❮</a>
-        <img src="images/wood3.jpg" alt="Woodworking example 3">
-        <a class="arrow right" href="#wood4">❯</a>
-      </div>
-
-      <div id="wood4" class="slide">
-        <a class="arrow left" href="#wood3">❮</a>
-        <img src="images/wood4.jpg" alt="Woodworking example 4">
-        <a class="arrow right" href="#wood1">❯</a>
-      </div>
+      <!-- Custom Work -->
+      <a class="portfolio-link" href="#lb-custom">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/acountrytouchtumbler.jpg" alt="Custom work preview" loading="lazy" />
+          <h3>Custom Work</h3>
+          <p>Unique made-to-order projects built to your idea</p>
+        </div>
+      </a>
     </div>
+  </main>
 
-    <p>Custom wood signs, shelves, and home decor.</p>
-  </div>
-</div>
+  <!-- =========================
+       LIGHTBOXES (CSS :target)
+       ========================= -->
 
-<!-- TUMBLERS -->
-<div id="lb-tumblers" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <div class="lightbox-content">
-    <h3>Tumblers</h3>
+  <!-- Woodworking Lightbox -->
+  <div id="lb-wood" class="lightbox">
+    <a href="#" class="lightbox-close" aria-label="Close">×</a>
+    <div class="lightbox-content">
+      <h3>Woodworking</h3>
 
-    <div class="slider" id="tumbler-slider">
-      <div id="tumbler1" class="slide">
-        <a class="arrow left" href="#tumbler4">❮</a>
-        <img src="images/tumbler1.jpg" alt="Tumbler example 1">
-        <a class="arrow right" href="#tumbler2">❯</a>
+      <div class="lightbox-slider" data-slider="wood">
+        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/dressbench.jpg" alt="Woodworking example 1" />
+          <img class="slide-img" src="images/flagmarineclockwoodwork.jpg" alt="Woodworking example 2" />
+          <img class="slide-img" src="images/woodbench.jpg" alt="Woodworking example 3" />
+          <img class="slide-img" src="images/itsclockwood.jpg" alt="Woodworking example 4" />
+        </div>
+
+        <button class="slide-btn next" aria-label="Next image">›</button>
       </div>
 
-      <div id="tumbler2" class="slide">
-        <a class="arrow left" href="#tumbler1">❮</a>
-        <img src="images/tumbler2.jpg" alt="Tumbler example 2">
-        <a class="arrow right" href="#tumbler3">❯</a>
-      </div>
-
-      <div id="tumbler3" class="slide">
-        <a class="arrow left" href="#tumbler2">❮</a>
-        <img src="images/tumbler3.jpg" alt="Tumbler example 3">
-        <a class="arrow right" href="#tumbler4">❯</a>
-      </div>
-
-      <div id="tumbler4" class="slide">
-        <a class="arrow left" href="#tumbler3">❮</a>
-        <img src="images/tumbler4.jpg" alt="Tumbler example 4">
-        <a class="arrow right" href="#tumbler1">❯</a>
-      </div>
+      <p>Custom wood pieces made to order.</p>
     </div>
-
-    <p>Personalized tumblers with names, logos, colors, and more.</p>
   </div>
-</div>
 
-<!-- 3D PRINTS -->
-<div id="lb-prints" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <div class="lightbox-content">
-    <h3>3D Prints</h3>
+  <!-- Tumblers Lightbox -->
+  <div id="lb-tumblers" class="lightbox">
+    <a href="#" class="lightbox-close" aria-label="Close">×</a>
+    <div class="lightbox-content">
+      <h3>Tumblers</h3>
 
-    <div class="slider" id="print-slider">
-      <div id="print1" class="slide">
-        <a class="arrow left" href="#print4">❮</a>
-        <img src="images/print1.jpg" alt="3D print example 1">
-        <a class="arrow right" href="#print2">❯</a>
+      <div class="lightbox-slider" data-slider="tumblers">
+        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/acountrytouchtumbler.jpg" alt="Tumbler example 1" />
+          <img class="slide-img" src="images/multitumblers.jpg" alt="Tumbler example 2" />
+          <img class="slide-img" src="images/glassmug.jpg" alt="Tumbler example 3" />
+          <img class="slide-img" src="images/horrortumblers.jpg" alt="Tumbler example 4" />
+        </div>
+
+        <button class="slide-btn next" aria-label="Next image">›</button>
       </div>
 
-      <div id="print2" class="slide">
-        <a class="arrow left" href="#print1">❮</a>
-        <img src="images/print2.jpg" alt="3D print example 2">
-        <a class="arrow right" href="#print3">❯</a>
-      </div>
-
-      <div id="print3" class="slide">
-        <a class="arrow left" href="#print2">❮</a>
-        <img src="images/print3.jpg" alt="3D print example 3">
-        <a class="arrow right" href="#print4">❯</a>
-      </div>
-
-      <div id="print4" class="slide">
-        <a class="arrow left" href="#print3">❮</a>
-        <img src="images/print4.jpg" alt="3D print example 4">
-        <a class="arrow right" href="#print1">❯</a>
-      </div>
+      <p>Personalized tumblers with custom designs.</p>
     </div>
-
-    <p>Custom 3D printed designs — parts, gifts, prototypes, and custom builds.</p>
   </div>
-</div>
 
-<!-- CUSTOM BUILDS -->
-<div id="lb-custom" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <div class="lightbox-content">
-    <h3>Custom Builds</h3>
+  <!-- 3D Prints Lightbox -->
+  <div id="lb-prints" class="lightbox">
+    <a href="#" class="lightbox-close" aria-label="Close">×</a>
+    <div class="lightbox-content">
+      <h3>3D Prints</h3>
 
-    <div class="slider" id="custom-slider">
-      <div id="custom1" class="slide">
-        <a class="arrow left" href="#custom4">❮</a>
-        <img src="images/custom1.jpg" alt="Custom build example 1">
-        <a class="arrow right" href="#custom2">❯</a>
+      <div class="lightbox-slider" data-slider="prints">
+        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/3dprintedpokemon.jpg" alt="3D print example 1" />
+          <img class="slide-img" src="images/3dprintedpokemons.jpg" alt="3D print example 2" />
+          <img class="slide-img" src="images/jesus3d.jpg" alt="3D print example 3" />
+          <img class="slide-img" src="images/hewithouse.jpg" alt="3D print example 4" />
+        </div>
+
+        <button class="slide-btn next" aria-label="Next image">›</button>
       </div>
 
-      <div id="custom2" class="slide">
-        <a class="arrow left" href="#custom1">❮</a>
-        <img src="images/custom2.jpg" alt="Custom build example 2">
-        <a class="arrow right" href="#custom3">❯</a>
-      </div>
-
-      <div id="custom3" class="slide">
-        <a class="arrow left" href="#custom2">❮</a>
-        <img src="images/custom3.jpg" alt="Custom build example 3">
-        <a class="arrow right" href="#custom4">❯</a>
-      </div>
-
-      <div id="custom4" class="slide">
-        <a class="arrow left" href="#custom3">❮</a>
-        <img src="images/custom4.jpg" alt="Custom build example 4">
-        <a class="arrow right" href="#custom1">❯</a>
-      </div>
+      <p>Custom 3D printed designs — parts, gifts, prototypes, and builds.</p>
     </div>
-
-    <p>Unique made-to-order projects built to your idea and requirements.</p>
   </div>
-</div>
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav-menu');
 
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
+  <!-- Custom Work Lightbox -->
+  <div id="lb-custom" class="lightbox">
+    <a href="#" class="lightbox-close" aria-label="Close">×</a>
+    <div class="lightbox-content">
+      <h3>Custom Work</h3>
+
+      <div class="lightbox-slider" data-slider="custom">
+        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/colorlithopanes.jpg" alt="Custom example 1" />
+          <img class="slide-img" src="images/acountrytouchtumbler.jpg" alt="Custom example 2" />
+          <img class="slide-img" src="images/flagmarineclockwoodwork.jpg" alt="Custom example 3" />
+          <img class="slide-img" src="images/jesus3d.jpg" alt="Custom example 4" />
+        </div>
+
+        <button class="slide-btn next" aria-label="Next image">›</button>
+      </div>
+
+      <p>Unique made-to-order projects — tell us what you want and we’ll build it.</p>
+    </div>
+  </div>
+
+  <!-- =========================
+       SCRIPTS
+       ========================= -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+  </script>
+
+  <script>
+    // Portfolio lightbox sliders
+    document.querySelectorAll('.lightbox-slider').forEach(slider => {
+      const imgs = Array.from(slider.querySelectorAll('.slide-img'));
+      const prev = slider.querySelector('.prev');
+      const next = slider.querySelector('.next');
+
+      let index = imgs.findIndex(img => img.classList.contains('is-active'));
+      if (index < 0) index = 0;
+
+      function show(i) {
+        imgs.forEach(img => img.classList.remove('is-active'));
+        imgs[i].classList.add('is-active');
+      }
+
+      if (prev) {
+        prev.addEventListener('click', (e) => {
+          e.preventDefault();
+          index = (index - 1 + imgs.length) % imgs.length;
+          show(index);
+        });
+      }
+
+      if (next) {
+        next.addEventListener('click', (e) => {
+          e.preventDefault();
+          index = (index + 1) % imgs.length;
+          show(index);
+        });
+      }
     });
-  }
-</script>
-
+  </script>
 </body>
 </html>
