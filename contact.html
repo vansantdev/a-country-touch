@@ -23,7 +23,13 @@
 
 <header>
   <h1>A Country Touch</h1>
-  <nav>
+
+  <!-- Hamburger button -->
+  <button class="menu-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <nav class="nav-menu">
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="order.html">Custom Order</a>
@@ -31,6 +37,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
+
 
 <main class="page">
   <h2>Contact</h2>
@@ -101,6 +108,16 @@
     We typically respond within 1–2 business days.
   </p>
 </main>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-menu');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
+</script>
 
 </body>
 </html>

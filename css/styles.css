@@ -337,3 +337,42 @@ nav a:hover {
   max-height: 85vh;
   overflow-y: auto;
 }
+/* =========================
+   MOBILE MENU
+   ========================= */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+
+  .nav-menu a {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}

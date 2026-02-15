@@ -23,21 +23,38 @@
 
 
 <header>
-    <h1>A Country Touch</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="order.html">Custom Order</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <h1>A Country Touch</h1>
+
+  <!-- Hamburger button -->
+  <button class="menu-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <nav class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="order.html">Custom Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
+
 
 <section class="hero">
     <h2>Hand Crafted Items Built With Precision</h2>
     <p>Personalized woodwork, tumblers, and custom 3D creations made just for you.</p>
     <a href="order.html" class="btn">Request a Custom Order</a>
 </section>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-menu');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
+</script>
 
 </body>
 </html>
