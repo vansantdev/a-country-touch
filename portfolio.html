@@ -6,15 +6,9 @@
 
   <title>A Country Touch | Portfolio</title>
   <meta name="description"
-        content="Browse examples of our work — woodworking, tumblers, 3D prints, metal spinners, and more from A Country Touch." />
-
-  <meta property="og:title" content="A Country Touch | Portfolio" />
-  <meta property="og:description" content="Examples of our custom work — woodworking, tumblers, 3D prints, and more." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vansantdev.github.io/a-country-touch/portfolio.html" />
+        content="Browse examples of our work — woodworking, tumblers, 3D prints, and metal spinners from A Country Touch." />
 
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -23,7 +17,7 @@
 
     <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-    <nav class="nav-menu" aria-label="Main navigation">
+    <nav class="nav-menu">
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="order.html">Custom Order</a>
@@ -37,12 +31,13 @@
     <p class="muted">Click a category to view examples.</p>
 
     <div class="portfolio-grid">
+
       <!-- WOODWORKING -->
       <button class="portfolio-link" type="button" data-open="lb-wood">
         <div class="portfolio-item">
           <img class="card-thumb" src="images/dresserbench.jpg" alt="Woodworking example">
           <h3>Woodworking</h3>
-          <p>Benches, tables, flags, clocks, and custom builds.</p>
+          <p>Benches, tables, epoxy pieces, and custom builds.</p>
         </div>
       </button>
 
@@ -69,130 +64,132 @@
         <div class="portfolio-item">
           <img class="card-thumb" src="images/americaspinner.jpg" alt="Metal spinner example">
           <h3>Metal / Wind Spinners</h3>
-          <p>Metal spinners and custom engraved pieces.</p>
+          <p>Metal spinners and engraved pieces.</p>
         </div>
       </button>
+
     </div>
   </main>
 
   <!-- =========================
-       LIGHTBOX: WOODWORKING
+       WOODWORKING
        ========================= -->
-  <div id="lb-wood" class="lightbox" aria-hidden="true">
-    <div class="lightbox-content" role="dialog" aria-label="Woodworking gallery">
-      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <div id="lb-wood" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close">×</button>
       <h3>Woodworking</h3>
 
       <div class="lightbox-slider">
-        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+        <button class="slide-btn prev">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/dresserbench.jpg" alt="Woodworking example 1">
-          <img class="slide-img" src="images/woodbench.jpg" alt="Woodworking example 2">
-          <img class="slide-img" src="images/woodcustomtable.jpg" alt="Woodworking example 3">
-          <img class="slide-img" src="images/woodslidetable.jpg" alt="Woodworking example 4">
-          <img class="slide-img" src="images/wavingflagwood.jpg" alt="Woodworking example 5">
-          <img class="slide-img" src="images/itsclockwood.jpg" alt="Woodworking example 6">
-          <img class="slide-img" src="images/woodbeehivecustom.jpg" alt="Woodworking example 7">
+          <img class="slide-img is-active" src="images/dresserbench.jpg">
+          <img class="slide-img" src="images/woodbench.jpg">
+          <img class="slide-img" src="images/woodcustomtable.jpg">
+          <img class="slide-img" src="images/woodslidetable.jpg">
+          <img class="slide-img" src="images/wavingflagwood.jpg">
+          <img class="slide-img" src="images/itsclockwood.jpg">
+          <img class="slide-img" src="images/woodbeehivecustom.jpg">
         </div>
 
-        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+        <button class="slide-btn next">›</button>
       </div>
 
-      <p class="muted">Custom benches, tables, flags, clocks, and unique epoxy projects built to order.</p>
+      <p class="muted">Custom benches, tables, flags, clocks, and epoxy wood projects.</p>
     </div>
   </div>
 
   <!-- =========================
-       LIGHTBOX: TUMBLERS
+       TUMBLERS
        ========================= -->
-  <div id="lb-tumblers" class="lightbox" aria-hidden="true">
-    <div class="lightbox-content" role="dialog" aria-label="Tumblers gallery">
-      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <div id="lb-tumblers" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close">×</button>
       <h3>Tumblers & Drinkware</h3>
 
       <div class="lightbox-slider">
-        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+        <button class="slide-btn prev">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/acountrytouchtumbler.jpg" alt="Tumbler example 1">
-          <img class="slide-img" src="images/horrortumblers.jpg" alt="Tumbler example 2">
-          <img class="slide-img" src="images/multitumblers.jpg" alt="Tumbler example 3">
-          <img class="slide-img" src="images/glasstumbler.jpg" alt="Tumbler example 4">
-          <img class="slide-img" src="images/glassmug.jpg" alt="Drinkware example 5">
+          <img class="slide-img is-active" src="images/acountrytouchtumbler.jpg">
+          <img class="slide-img" src="images/horrortumblers.jpg">
+          <img class="slide-img" src="images/multitumblers.jpg">
+          <img class="slide-img" src="images/glasstumbler.jpg">
+          <img class="slide-img" src="images/glassmug.jpg">
         </div>
 
-        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+        <button class="slide-btn next">›</button>
       </div>
 
-      <p class="muted">Personalized drinkware — names, logos, themes, and custom designs.</p>
+      <p class="muted">Personalized drinkware with custom themes and designs.</p>
     </div>
   </div>
 
   <!-- =========================
-       LIGHTBOX: 3D PRINTS
+       3D PRINTS
        ========================= -->
-  <div id="lb-prints" class="lightbox" aria-hidden="true">
-    <div class="lightbox-content" role="dialog" aria-label="3D Prints gallery">
-      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <div id="lb-prints" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close">×</button>
       <h3>3D Prints</h3>
 
       <div class="lightbox-slider">
-        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+        <button class="slide-btn prev">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/3dprintedpokemon.jpg" alt="3D print example 1">
-          <img class="slide-img" src="images/3dprintedpokemons.jpg" alt="3D print example 2">
-          <img class="slide-img" src="images/3djesus.jpg" alt="3D print example 3">
-          <img class="slide-img" src="images/3dcolorlithopanes.jpg" alt="3D print example 4">
-          <img class="slide-img" src="images/3dhewitouse.jpg" alt="3D print example 5">
-          <img class="slide-img" src="images/3dmyerhouse.jpg" alt="3D print example 6">
+          <img class="slide-img is-active" src="images/3dprintedpokemon.jpg">
+          <img class="slide-img" src="images/3dprintedpokemons.jpg">
+          <img class="slide-img" src="images/3djesus.jpg">
+          <img class="slide-img" src="images/3dcolorlithopanes.jpg">
+          <img class="slide-img" src="images/3dhewithouse.jpg">
+          <img class="slide-img" src="images/3dmyerhouse.jpg">
         </div>
 
-        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+        <button class="slide-btn next">›</button>
       </div>
 
-      <p class="muted">Custom 3D printed designs — prints, lithophanes, and custom pieces.</p>
+      <p class="muted">Custom 3D printed designs, lithophanes, and display pieces.</p>
     </div>
   </div>
 
   <!-- =========================
-       LIGHTBOX: METAL / SPINNERS
+       METAL / SPINNERS
        ========================= -->
-  <div id="lb-metal" class="lightbox" aria-hidden="true">
-    <div class="lightbox-content" role="dialog" aria-label="Metal and spinners gallery">
-      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <div id="lb-metal" class="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close">×</button>
       <h3>Metal / Wind Spinners</h3>
 
       <div class="lightbox-slider">
-        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+        <button class="slide-btn prev">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/americaspinner.jpg" alt="Metal spinner 1">
-          <img class="slide-img" src="images/eaglespinner.jpg" alt="Metal spinner 2">
+          <img class="slide-img is-active" src="images/americaspinner.jpg">
+          <img class="slide-img" src="images/eaglespinner.jpg">
         </div>
 
-        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+        <button class="slide-btn next">›</button>
       </div>
 
       <p class="muted">Metal wind spinners and custom engraved pieces.</p>
     </div>
   </div>
 
+  <!-- =========================
+       SCRIPTS
+       ========================= -->
   <script>
-    // Mobile menu toggle
+    // Mobile menu
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-menu');
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
         nav.classList.toggle('active');
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
       });
     }
 
     // Open lightbox
-    document.querySelectorAll('.portfolio-link[data-open]').forEach(btn => {
+    document.querySelectorAll('.portfolio-link').forEach(btn => {
       btn.addEventListener('click', () => {
         const id = btn.getAttribute('data-open');
         const lb = document.getElementById(id);
@@ -200,17 +197,17 @@
       });
     });
 
-    // Lightbox close + slider
+    // Lightbox + slider
     document.querySelectorAll('.lightbox').forEach(lb => {
       const closeBtn = lb.querySelector('.lightbox-close');
-      const prev = lb.querySelector('.slide-btn.prev');
-      const next = lb.querySelector('.slide-btn.next');
+      const prev = lb.querySelector('.prev');
+      const next = lb.querySelector('.next');
       const imgs = Array.from(lb.querySelectorAll('.slide-img'));
 
       function show(i) {
         imgs.forEach(img => img.classList.remove('is-active'));
         if (imgs[i]) imgs[i].classList.add('is-active');
-        lb.dataset.index = String(i);
+        lb.dataset.index = i;
       }
 
       function close() {
@@ -220,10 +217,7 @@
 
       if (imgs.length) show(0);
 
-      if (closeBtn) closeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        close();
-      });
+      if (closeBtn) closeBtn.addEventListener('click', close);
 
       lb.addEventListener('click', (e) => {
         if (e.target === lb) close();
@@ -231,23 +225,15 @@
 
       if (prev) prev.addEventListener('click', (e) => {
         e.stopPropagation();
-        const cur = parseInt(lb.dataset.index || '0', 10);
-        const nxt = (cur - 1 + imgs.length) % imgs.length;
-        show(nxt);
+        const cur = parseInt(lb.dataset.index || 0);
+        show((cur - 1 + imgs.length) % imgs.length);
       });
 
       if (next) next.addEventListener('click', (e) => {
         e.stopPropagation();
-        const cur = parseInt(lb.dataset.index || '0', 10);
-        const nxt = (cur + 1) % imgs.length;
-        show(nxt);
+        const cur = parseInt(lb.dataset.index || 0);
+        show((cur + 1) % imgs.length);
       });
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.lightbox.open').forEach(lb => lb.classList.remove('open'));
-      }
     });
   </script>
 </body>
