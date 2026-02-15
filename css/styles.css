@@ -21,7 +21,7 @@ a { color: inherit; }
 /* Your HTML uses: <header class="site-header"> */
 .site-header{
   background: #222;
-  color: #00ff0d;
+  color: #ff00#22c55ecc;
   text-align: center;
   padding: 20px;
 }
@@ -38,7 +38,7 @@ a { color: inherit; }
 }
 
 .nav-menu a:hover{
-  color: #00ff0d;
+  color: #22c55e;
 }
 
 /* =========================
@@ -73,7 +73,7 @@ a { color: inherit; }
   cursor: pointer;
 }
 
-.btn:hover{ background: #09ff00; }
+.btn:hover{ background: #22c55e; }
 
 /* =========================
    LISTS
@@ -118,7 +118,7 @@ a { color: inherit; }
    ========================= */
 
 .social-link{
-  color: #00ff4c;
+  color: #22c55e;
   font-weight: bold;
   text-decoration: none;
 }
@@ -221,7 +221,7 @@ a { color: inherit; }
   color: #fff;
 }
 
-.lightbox-close:hover{ background: #00ff4c; }
+.lightbox-close:hover{ background: #22c55e; }
 
 /* =========================
    SLIDER (inside lightbox)
@@ -266,7 +266,7 @@ a { color: inherit; }
   cursor: pointer;
 }
 
-.slide-btn:hover{ background: #00ff4c; }
+.slide-btn:hover{ background: #22c55e; }
 
 /* =========================
    MOBILE MENU
