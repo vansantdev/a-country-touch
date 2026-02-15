@@ -4,76 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>A Country Touch | Custom Orders</title>
-  <meta name="description"
-        content="Start a custom order with A Country Touch. We create made-to-order woodworking, tumblers, and 3D printed designs.">
-
-  <!-- Open Graph (Facebook preview) -->
-  <meta property="og:title" content="A Country Touch | Custom Orders">
-  <meta property="og:description" content="Request a custom piece — woodworking, tumblers, and 3D prints made to order.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vansantdev.github.io/a-country-touch/order.html">
+  <title>A Country Touch | Custom Order</title>
+  <meta name="description" content="Request a custom order from A Country Touch — woodworking, tumblers, 3D prints, decals, and more." />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
+<body>
+  <header class="site-header">
+    <h1>A Country Touch</h1>
 
-<header>
-  <h1>A Country Touch</h1>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-  <!-- Hamburger button -->
-  <button class="menu-toggle" aria-label="Toggle menu">
-    ☰
-  </button>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <nav class="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="order.html">Custom Order</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <main class="page">
+    <h2>Custom Order Request</h2>
+    <p class="muted">
+      Tell us what you want made and we’ll reach out with questions, pricing, and a timeline.
+    </p>
 
+    <!-- Replace the email below with your sister’s business email -->
+    <form class="form" action="https://formsubmit.co/acountrytouch@yahoo.com" method="POST">
+      <!-- FormSubmit options -->
+      <input type="hidden" name="_subject" value="New Custom Order Request - A Country Touch" />
+      <input type="hidden" name="_captcha" value="false" />
+      <!-- Optional: redirect to a thank-you page if you create one -->
+      <!-- <input type="hidden" name="_next" value="https://vansantdev.github.io/a-country-touch/thanks.html" /> -->
 
-<main class="page">
-  <h2>Custom Orders</h2>
+      <label>
+        Your Name
+        <input type="text" name="name" required />
+      </label>
 
-  <p>
-    Every item from A Country Touch is custom made to order.
-    Whether you need woodworking, tumblers, or 3D printed designs,
-    we’re here to bring your idea to life.
-  </p>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
 
-  <h3>How the process works</h3>
-  <ol class="list">
-    <li>Submit your idea through our contact form.</li>
-    <li>We review details and send you a quote.</li>
-    <li>We build your custom piece and keep you updated.</li>
-    <li>You receive your finished custom product.</li>
-  </ol>
+      <label>
+        Phone (optional)
+        <input type="tel" name="phone" placeholder="(###) ###-####" />
+      </label>
 
-  <h3>Ready to get started?</h3>
-  <p>
-    Click below and tell us what you're looking for.
-  </p>
+      <label>
+        What are you ordering?
+        <select name="category" required>
+          <option value="">Select one</option>
+          <option value="Woodworking">Woodworking</option>
+          <option value="Tumblers/Drinkware">Tumblers / Drinkware</option>
+          <option value="3D Prints">3D Prints</option>
+          <option value="Laser/Engraving">Laser / Engraving</option>
+          <option value="Decals/Stickers">Decals / Stickers</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
 
-  <a href="contact.html" class="btn">Start Your Custom Order</a>
+      <label>
+        Description (be specific)
+        <textarea name="description" rows="6" placeholder="Sizes, names, colors, theme, text, logo, etc." required></textarea>
+      </label>
 
-  <p class="small">
-    Tip: If you have inspiration photos, mention it in your message and we’ll follow up.
-  </p>
-</main>
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav-menu');
+      <label>
+        Deadline / Needed by (optional)
+        <input type="text" name="deadline" placeholder="Example: March 15 or 'no rush'" />
+      </label>
 
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  }
-</script>
+      <label>
+        Budget Range (optional)
+        <select name="budget">
+          <option value="">Select one</option>
+          <option value="$ - Under $25">Under $25</option>
+          <option value="$$ - $25 to $75">$25 to $75</option>
+          <option value="$$$ - $75 to $150">$75 to $150</option>
+          <option value="$$$$ - $150+">$150+</option>
+        </select>
+      </label>
 
+      <button class="btn" type="submit">Send Request</button>
+
+      <p class="small">
+        After you submit, you may see a confirmation page. If you don’t hear back within 24–48 hours,
+        please message us on Facebook.
+      </p>
+    </form>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+      });
+    }
+  </script>
 </body>
 </html>
