@@ -6,11 +6,11 @@
 
   <title>A Country Touch | Portfolio</title>
   <meta name="description"
-        content="Browse examples of our custom woodworking, tumblers, and 3D printed designs from A Country Touch." />
+        content="Browse examples of our work — custom woodworking, tumblers, 3D prints, and laser/metal creations from A Country Touch." />
 
   <!-- Open Graph (Facebook preview) -->
   <meta property="og:title" content="A Country Touch | Portfolio" />
-  <meta property="og:description" content="Examples of custom woodworking, tumblers, and 3D printed designs made to order." />
+  <meta property="og:description" content="Examples of custom woodworking, tumblers, 3D prints, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vansantdev.github.io/a-country-touch/portfolio.html" />
 
@@ -22,7 +22,7 @@
   <header class="site-header">
     <h1>A Country Touch</h1>
 
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
     <nav class="nav-menu" aria-label="Main navigation">
       <a href="index.html">Home</a>
@@ -35,140 +35,144 @@
 
   <main class="page">
     <h2>Our Work</h2>
-    <p>Click a category to view examples.</p>
+    <p class="muted">Click a category to view examples.</p>
 
     <div class="portfolio-grid">
-      <!-- Woodworking -->
-      <a class="portfolio-link" href="#lb-wood">
+      <!-- WOODWORKING -->
+      <button class="portfolio-link" type="button" data-open="lb-wood">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/dressbench.jpg" alt="Woodworking preview" loading="lazy" />
+          <img class="card-thumb" src="images/dresserbench.jpg" alt="Woodworking example">
           <h3>Woodworking</h3>
-          <p>Custom wood signs, shelves, and home decor</p>
+          <p>Benches, tables, decor, and custom builds.</p>
         </div>
-      </a>
+      </button>
 
-      <!-- Tumblers -->
-      <a class="portfolio-link" href="#lb-tumblers">
+      <!-- TUMBLERS -->
+      <button class="portfolio-link" type="button" data-open="lb-tumblers">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/multitumblers.jpg" alt="Tumblers preview" loading="lazy" />
-          <h3>Tumblers</h3>
-          <p>Personalized tumblers with names, logos, and colors</p>
+          <img class="card-thumb" src="images/acountrytouchtumbler.jpg" alt="Tumbler example">
+          <h3>Tumblers & Drinkware</h3>
+          <p>Custom tumblers, mugs, and designs.</p>
         </div>
-      </a>
+      </button>
 
-      <!-- 3D Prints -->
-      <a class="portfolio-link" href="#lb-prints">
+      <!-- 3D PRINTS -->
+      <button class="portfolio-link" type="button" data-open="lb-prints">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/3dprintedpokemon.jpg" alt="3D prints preview" loading="lazy" />
+          <img class="card-thumb" src="images/3dprintedpokemon.jpg" alt="3D print example">
           <h3>3D Prints</h3>
-          <p>Custom 3D printed designs — parts, gifts, prototypes</p>
+          <p>Custom prints, gifts, prototypes, and more.</p>
         </div>
-      </a>
+      </button>
 
-      <!-- Custom Work -->
-      <a class="portfolio-link" href="#lb-custom">
+      <!-- LASER / METAL / DECALS -->
+      <button class="portfolio-link" type="button" data-open="lb-laser">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/acountrytouchtumbler.jpg" alt="Custom work preview" loading="lazy" />
-          <h3>Custom Work</h3>
-          <p>Unique made-to-order projects built to your idea</p>
+          <img class="card-thumb" src="images/americaspinner.jpg" alt="Laser / metal example">
+          <h3>Laser / Metal / Decals</h3>
+          <p>Engraving, spinners, decals & custom creations.</p>
         </div>
-      </a>
+      </button>
     </div>
   </main>
 
   <!-- =========================
-       LIGHTBOXES (CSS :target)
+       LIGHTBOX: WOODWORKING
        ========================= -->
-
-  <!-- Woodworking Lightbox -->
-  <div id="lb-wood" class="lightbox">
-    <a href="#" class="lightbox-close" aria-label="Close">×</a>
-    <div class="lightbox-content">
+  <div id="lb-wood" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Woodworking gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
       <h3>Woodworking</h3>
 
-      <div class="lightbox-slider" data-slider="wood">
-        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+      <div class="lightbox-slider">
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/dressbench.jpg" alt="Woodworking example 1" />
-          <img class="slide-img" src="images/flagmarineclockwoodwork.jpg" alt="Woodworking example 2" />
-          <img class="slide-img" src="images/woodbench.jpg" alt="Woodworking example 3" />
-          <img class="slide-img" src="images/itsclockwood.jpg" alt="Woodworking example 4" />
+          <img class="slide-img is-active" src="images/dresserbench.jpg" alt="Woodworking example 1">
+          <img class="slide-img" src="images/woodbench.jpg" alt="Woodworking example 2">
+          <img class="slide-img" src="images/woodcustomtable.jpg" alt="Woodworking example 3">
+          <img class="slide-img" src="images/woodslidetable.jpg" alt="Woodworking example 4">
         </div>
 
-        <button class="slide-btn next" aria-label="Next image">›</button>
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
       </div>
 
-      <p>Custom wood pieces made to order.</p>
+      <p class="muted">Custom benches, tables, and wood projects built to order.</p>
     </div>
   </div>
 
-  <!-- Tumblers Lightbox -->
-  <div id="lb-tumblers" class="lightbox">
-    <a href="#" class="lightbox-close" aria-label="Close">×</a>
-    <div class="lightbox-content">
-      <h3>Tumblers</h3>
+  <!-- =========================
+       LIGHTBOX: TUMBLERS
+       ========================= -->
+  <div id="lb-tumblers" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Tumblers gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Tumblers & Drinkware</h3>
 
-      <div class="lightbox-slider" data-slider="tumblers">
-        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+      <div class="lightbox-slider">
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/acountrytouchtumbler.jpg" alt="Tumbler example 1" />
-          <img class="slide-img" src="images/multitumblers.jpg" alt="Tumbler example 2" />
-          <img class="slide-img" src="images/glassmug.jpg" alt="Tumbler example 3" />
-          <img class="slide-img" src="images/horrortumblers.jpg" alt="Tumbler example 4" />
+          <img class="slide-img is-active" src="images/acountrytouchtumbler.jpg" alt="Tumbler example 1">
+          <img class="slide-img" src="images/glasstumbler.jpg" alt="Tumbler example 2">
+          <img class="slide-img" src="images/multitumblers.jpg" alt="Tumbler example 3">
+          <img class="slide-img" src="images/horrortumblers.jpg" alt="Tumbler example 4">
         </div>
 
-        <button class="slide-btn next" aria-label="Next image">›</button>
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
       </div>
 
-      <p>Personalized tumblers with custom designs.</p>
+      <p class="muted">Personalized drinkware — names, logos, themes, and custom designs.</p>
     </div>
   </div>
 
-  <!-- 3D Prints Lightbox -->
-  <div id="lb-prints" class="lightbox">
-    <a href="#" class="lightbox-close" aria-label="Close">×</a>
-    <div class="lightbox-content">
+  <!-- =========================
+       LIGHTBOX: 3D PRINTS
+       ========================= -->
+  <div id="lb-prints" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="3D Prints gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
       <h3>3D Prints</h3>
 
-      <div class="lightbox-slider" data-slider="prints">
-        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+      <div class="lightbox-slider">
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/3dprintedpokemon.jpg" alt="3D print example 1" />
-          <img class="slide-img" src="images/3dprintedpokemons.jpg" alt="3D print example 2" />
-          <img class="slide-img" src="images/jesus3d.jpg" alt="3D print example 3" />
-          <img class="slide-img" src="images/hewithouse.jpg" alt="3D print example 4" />
+          <img class="slide-img is-active" src="images/3dprintedpokemon.jpg" alt="3D print example 1">
+          <img class="slide-img" src="images/3dprintedpokemons.jpg" alt="3D print example 2">
+          <img class="slide-img" src="images/3djesus.jpg" alt="3D print example 3">
+          <img class="slide-img" src="images/itsclockwood.jpg" alt="3D print example 4">
         </div>
 
-        <button class="slide-btn next" aria-label="Next image">›</button>
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
       </div>
 
-      <p>Custom 3D printed designs — parts, gifts, prototypes, and builds.</p>
+      <p class="muted">Custom 3D printed designs — parts, gifts, prototypes, and more.</p>
     </div>
   </div>
 
-  <!-- Custom Work Lightbox -->
-  <div id="lb-custom" class="lightbox">
-    <a href="#" class="lightbox-close" aria-label="Close">×</a>
-    <div class="lightbox-content">
-      <h3>Custom Work</h3>
+  <!-- =========================
+       LIGHTBOX: LASER / METAL / DECALS
+       ========================= -->
+  <div id="lb-laser" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Laser and metal gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Laser / Metal / Decals</h3>
 
-      <div class="lightbox-slider" data-slider="custom">
-        <button class="slide-btn prev" aria-label="Previous image">‹</button>
+      <div class="lightbox-slider">
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
 
         <div class="slide-frame">
-          <img class="slide-img is-active" src="images/colorlithopanes.jpg" alt="Custom example 1" />
-          <img class="slide-img" src="images/acountrytouchtumbler.jpg" alt="Custom example 2" />
-          <img class="slide-img" src="images/flagmarineclockwoodwork.jpg" alt="Custom example 3" />
-          <img class="slide-img" src="images/jesus3d.jpg" alt="Custom example 4" />
+          <img class="slide-img is-active" src="images/americaspinner.jpg" alt="Laser/metal example 1">
+          <img class="slide-img" src="images/eaglespinner.jpg" alt="Laser/metal example 2">
+          <img class="slide-img" src="images/wavingflagwood.jpg" alt="Laser/metal example 3">
+          <img class="slide-img" src="images/3dcolorlithopanes.jpg" alt="Laser/metal example 4">
         </div>
 
-        <button class="slide-btn next" aria-label="Next image">›</button>
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
       </div>
 
-      <p>Unique made-to-order projects — tell us what you want and we’ll build it.</p>
+      <p class="muted">Engraving, spinners, decals, and custom creations. More coming soon.</p>
     </div>
   </div>
 
@@ -182,41 +186,70 @@
 
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        nav.classList.toggle('active');
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
       });
     }
-  </script>
 
-  <script>
-    // Portfolio lightbox sliders
-    document.querySelectorAll('.lightbox-slider').forEach(slider => {
-      const imgs = Array.from(slider.querySelectorAll('.slide-img'));
-      const prev = slider.querySelector('.prev');
-      const next = slider.querySelector('.next');
+    // Open lightbox by clicking a portfolio card
+    document.querySelectorAll('.portfolio-link[data-open]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-open');
+        const lb = document.getElementById(id);
+        if (lb) lb.classList.add('open');
+      });
+    });
 
-      let index = imgs.findIndex(img => img.classList.contains('is-active'));
-      if (index < 0) index = 0;
+    // Lightbox logic (close + slider)
+    document.querySelectorAll('.lightbox').forEach(lb => {
+      const closeBtn = lb.querySelector('.lightbox-close');
+      const prev = lb.querySelector('.slide-btn.prev');
+      const next = lb.querySelector('.slide-btn.next');
+      const imgs = Array.from(lb.querySelectorAll('.slide-img'));
 
       function show(i) {
         imgs.forEach(img => img.classList.remove('is-active'));
-        imgs[i].classList.add('is-active');
+        if (imgs[i]) imgs[i].classList.add('is-active');
+        lb.dataset.index = String(i);
       }
 
-      if (prev) {
-        prev.addEventListener('click', (e) => {
-          e.preventDefault();
-          index = (index - 1 + imgs.length) % imgs.length;
-          show(index);
-        });
+      function close() {
+        lb.classList.remove('open');
+        if (imgs.length) show(0); // reset to first image
       }
 
-      if (next) {
-        next.addEventListener('click', (e) => {
-          e.preventDefault();
-          index = (index + 1) % imgs.length;
-          show(index);
-        });
+      if (imgs.length) show(0);
+
+      if (closeBtn) closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        close();
+      });
+
+      // Click outside panel closes
+      lb.addEventListener('click', (e) => {
+        if (e.target === lb) close();
+      });
+
+      if (prev) prev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const cur = parseInt(lb.dataset.index || '0', 10);
+        const nxt = (cur - 1 + imgs.length) % imgs.length;
+        show(nxt);
+      });
+
+      if (next) next.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const cur = parseInt(lb.dataset.index || '0', 10);
+        const nxt = (cur + 1) % imgs.length;
+        show(nxt);
+      });
+    });
+
+    // ESC closes any open lightbox
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.lightbox.open').forEach(lb => lb.classList.remove('open'));
       }
     });
   </script>
