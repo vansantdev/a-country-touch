@@ -1,6 +1,4 @@
-// js/portfolio.js
-
-// Mobile menu
+// ===== Mobile menu =====
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-menu");
 
@@ -10,67 +8,69 @@ if (toggle && nav) {
   });
 }
 
-// Open lightbox when clicking category cards
+// ===== Open lightbox from portfolio cards =====
 document.querySelectorAll(".portfolio-link").forEach((btn) => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-open");
     const lb = document.getElementById(id);
     if (lb) {
       lb.classList.add("open");
-      document.body.style.overflow = "hidden"; // stop background scroll
+      lb.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
     }
   });
 });
 
-// Close + slider logic for each lightbox
+// ===== Lightbox + slider logic =====
 document.querySelectorAll(".lightbox").forEach((lb) => {
   const closeBtn = lb.querySelector(".lightbox-close");
   const prev = lb.querySelector(".prev");
   const next = lb.querySelector(".next");
   const imgs = Array.from(lb.querySelectorAll(".slide-img"));
 
-  let index = 0;
-
   function show(i) {
-    if (!imgs.length) return;
     imgs.forEach((img) => img.classList.remove("is-active"));
-    imgs[i].classList.add("is-active");
-    index = i;
+    if (imgs[i]) imgs[i].classList.add("is-active");
+    lb.dataset.index = String(i);
   }
 
   function close() {
     lb.classList.remove("open");
-    document.body.style.overflow = ""; // restore scroll
-    show(0);
+    lb.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("no-scroll");
+    if (imgs.length) show(0);
   }
 
   // init
-  show(0);
+  if (imgs.length) show(0);
 
   if (closeBtn) closeBtn.addEventListener("click", close);
 
-  // click outside modal closes
+  // click outside modal to close
   lb.addEventListener("click", (e) => {
     if (e.target === lb) close();
   });
 
-  // arrow controls
+  // ESC closes
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lb.classList.contains("open")) close();
+  });
+
   if (prev) {
     prev.addEventListener("click", (e) => {
       e.stopPropagation();
-      show((index - 1 + imgs.length) % imgs.length);
+      if (!imgs.length) return;
+      const cur = parseInt(lb.dataset.index || "0", 10);
+      show((cur - 1 + imgs.length) % imgs.length);
     });
   }
 
   if (next) {
     next.addEventListener("click", (e) => {
       e.stopPropagation();
-      show((index + 1) % imgs.length);
+      if (!imgs.length) return;
+      const cur = parseInt(lb.dataset.index || "0", 10);
+      show((cur + 1) % imgs.length);
     });
   }
-
-  // ESC closes
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lb.classList.contains("open")) close();
-  });
 });

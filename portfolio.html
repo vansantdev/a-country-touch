@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google tag (gtag.js) -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0LCH8S34B"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -18,245 +15,241 @@
 
   <title>A Country Touch | Portfolio</title>
   <meta name="description"
-        content="Browse examples of our work — woodworking, tumblers, 3D prints, metal spinners, and custom projects from A Country Touch." />
+        content="Browse examples of our work — woodworking, tumblers, 3D prints, door hangers, custom work, and metal wind spinners from A Country Touch." />
 
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/portfolio.js" defer></script>
 </head>
 
 <body>
-<header class="site-header">
-  <h1>A Country Touch</h1>
+  <header class="site-header">
+    <h1>A Country Touch</h1>
 
-<button class="menu-toggle" type="button" aria-label="Toggle menu">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu">☰</button>
 
-  <nav class="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="order.html">Custom Order</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main class="page">
-  <h2>Our Work</h2>
-  <p class="muted">Click a category to view examples.</p>
+  <main class="page">
+    <h2>Our Work</h2>
+    <p class="muted">Click a category to view examples.</p>
 
-  <div class="portfolio-grid">
+    <div class="portfolio-grid">
 
-```
-<!-- WOOD -->
-<button class="portfolio-link" type="button" data-open="lb-wood">
-  <div class="portfolio-item">
-    <img class="card-thumb" src="images/wood_1.jpg" alt="Woodworking example">
-    <h3>Woodworking</h3>
-    <p>Benches, flags, clocks, and custom builds.</p>
+      <!-- WOODWORKING -->
+      <button class="portfolio-link" type="button" data-open="lb-wood">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/wood_1.jpg" alt="Woodworking example">
+          <h3>Woodworking</h3>
+          <p>Benches, tables, flags, clocks, and custom builds.</p>
+        </div>
+      </button>
+
+      <!-- TUMBLERS -->
+      <button class="portfolio-link" type="button" data-open="lb-tumblers">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/tumblers_1.jpg" alt="Tumblers and drinkware example">
+          <h3>Tumblers & Drinkware</h3>
+          <p>Custom tumblers, mugs, and themed designs.</p>
+        </div>
+      </button>
+
+      <!-- 3D PRINTS -->
+      <button class="portfolio-link" type="button" data-open="lb-prints">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/3dprints_1.jpg" alt="3D print example">
+          <h3>3D Prints</h3>
+          <p>3D printed designs and lithophanes.</p>
+        </div>
+      </button>
+
+      <!-- METAL / WIND SPINNERS -->
+      <button class="portfolio-link" type="button" data-open="lb-metal">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/metal_1.jpg" alt="Metal wind spinner example">
+          <h3>Metal / Wind Spinners</h3>
+          <p>Metal spinners and engraved pieces.</p>
+        </div>
+      </button>
+
+      <!-- DOOR HANGERS -->
+      <button class="portfolio-link" type="button" data-open="lb-door">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/door_hanger_1.jpg" alt="Door hanger example">
+          <h3>Door Hangers</h3>
+          <p>Seasonal and custom door signs.</p>
+        </div>
+      </button>
+
+      <!-- CUSTOM WORK -->
+      <button class="portfolio-link" type="button" data-open="lb-custom">
+        <div class="portfolio-item">
+          <img class="card-thumb" src="images/custom_1.jpg" alt="Custom work example">
+          <h3>Custom Work</h3>
+          <p>One-of-a-kind builds and special projects.</p>
+        </div>
+      </button>
+
+    </div>
+  </main>
+
+  <!-- =========================
+       LIGHTBOX: WOODWORKING (4 images)
+       ========================= -->
+  <div id="lb-wood" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Woodworking gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Woodworking</h3>
+
+      <div class="lightbox-slider" data-slider>
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/wood_1.jpg" alt="Woodworking photo 1">
+          <img class="slide-img" src="images/wood_2.jpg" alt="Woodworking photo 2">
+          <img class="slide-img" src="images/wood_3.jpg" alt="Woodworking photo 3">
+          <img class="slide-img" src="images/wood_4.jpg" alt="Woodworking photo 4">
+        </div>
+
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+      </div>
+
+      <p class="muted">Handcrafted woodworking projects built to order.</p>
+    </div>
   </div>
-</button>
 
-<!-- TUMBLERS -->
-<button class="portfolio-link" type="button" data-open="lb-tumblers">
-  <div class="portfolio-item">
-    <img class="card-thumb" src="images/tumblers_1.jpg" alt="Tumbler example">
-    <h3>Tumblers & Drinkware</h3>
-    <p>Custom tumblers and personalized mugs.</p>
+  <!-- =========================
+       LIGHTBOX: TUMBLERS (4 images)
+       ========================= -->
+  <div id="lb-tumblers" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Tumblers gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Tumblers & Drinkware</h3>
+
+      <div class="lightbox-slider" data-slider>
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/tumblers_1.jpg" alt="Tumbler photo 1">
+          <img class="slide-img" src="images/tumblers_2.jpg" alt="Tumbler photo 2">
+          <img class="slide-img" src="images/tumblers_3.jpg" alt="Tumbler photo 3">
+          <img class="slide-img" src="images/tumblers_4.jpg" alt="Tumbler photo 4">
+        </div>
+
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+      </div>
+
+      <p class="muted">Personalized drinkware with custom themes and designs.</p>
+    </div>
   </div>
-</button>
 
-<!-- 3D PRINTS -->
-<button class="portfolio-link" type="button" data-open="lb-prints">
-  <div class="portfolio-item">
-    <img class="card-thumb" src="images/3dprints_1.jpg" alt="3D print example">
-    <h3>3D Prints</h3>
-    <p>3D printed designs and lithophanes.</p>
+  <!-- =========================
+       LIGHTBOX: 3D PRINTS (4 images)
+       ========================= -->
+  <div id="lb-prints" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="3D prints gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>3D Prints</h3>
+
+      <div class="lightbox-slider" data-slider>
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/3dprints_1.jpg" alt="3D print photo 1">
+          <img class="slide-img" src="images/3dprints_2.jpg" alt="3D print photo 2">
+          <img class="slide-img" src="images/3dprints_3.jpg" alt="3D print photo 3">
+          <img class="slide-img" src="images/3dprints_4.jpg" alt="3D print photo 4">
+        </div>
+
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+      </div>
+
+      <p class="muted">Custom 3D printed designs and lithophanes.</p>
+    </div>
   </div>
-</button>
 
-<!-- METAL -->
-<button class="portfolio-link" type="button" data-open="lb-metal">
-  <div class="portfolio-item">
-    <img class="card-thumb" src="images/metal_1.jpg" alt="Metal spinner example">
-    <h3>Metal / Wind Spinners</h3>
-    <p>Metal spinners and engraved pieces.</p>
+  <!-- =========================
+       LIGHTBOX: METAL (4 images)
+       ========================= -->
+  <div id="lb-metal" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Metal gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Metal / Wind Spinners</h3>
+
+      <div class="lightbox-slider" data-slider>
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/metal_1.jpg" alt="Metal photo 1">
+          <img class="slide-img" src="images/metal_2.jpg" alt="Metal photo 2">
+          <img class="slide-img" src="images/metal_3.jpg" alt="Metal photo 3">
+          <img class="slide-img" src="images/metal_4.jpg" alt="Metal photo 4">
+        </div>
+
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+      </div>
+
+      <p class="muted">Metal wind spinners and engraved pieces.</p>
+    </div>
   </div>
-</button>
 
-<!-- DOOR HANGERS -->
-<button class="portfolio-link" type="button" data-open="lb-door">
-  <div class="portfolio-item">
-    <img class="card-thumb" src="images/door_hanger_1.jpg" alt="Door hanger example">
-    <h3>Door Hangers</h3>
-    <p>Seasonal and custom door signs.</p>
+  <!-- =========================
+       LIGHTBOX: DOOR HANGERS (4 images)
+       NOTE: you currently have 3 files. The 4th repeats #3 so nothing goes black.
+       When you get door_hanger_4.jpg, swap it in.
+       ========================= -->
+  <div id="lb-door" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Door hangers gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Door Hangers</h3>
+
+      <div class="lightbox-slider" data-slider>
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/door_hanger_1.jpg" alt="Door hanger photo 1">
+          <img class="slide-img" src="images/door_hanger_2.jpg" alt="Door hanger photo 2">
+          <img class="slide-img" src="images/door_hanger_3.jpg" alt="Door hanger photo 3">
+          <img class="slide-img" src="images/door_hanger_3.jpg" alt="Door hanger photo 4">
+        </div>
+
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+      </div>
+
+      <p class="muted">Seasonal and custom door signs.</p>
+    </div>
   </div>
-</button>
 
-<!-- CUSTOM WORK -->
-<button class="portfolio-link" type="button" data-open="lb-custom">
-  <div class="portfolio-item">
-    <img class="card-thumb" src="images/custom_1.jpg" alt="Custom work example">
-    <h3>Custom Work</h3>
-    <p>Unique one-off builds and specialty projects.</p>
+  <!-- =========================
+       LIGHTBOX: CUSTOM WORK (4 images)
+       ========================= -->
+  <div id="lb-custom" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-label="Custom work gallery">
+      <button class="lightbox-close" type="button" aria-label="Close">×</button>
+      <h3>Custom Work</h3>
+
+      <div class="lightbox-slider" data-slider>
+        <button class="slide-btn prev" type="button" aria-label="Previous image">‹</button>
+
+        <div class="slide-frame">
+          <img class="slide-img is-active" src="images/custom_1.jpg" alt="Custom work photo 1">
+          <img class="slide-img" src="images/custom_2.jpg" alt="Custom work photo 2">
+          <img class="slide-img" src="images/custom_3.jpg" alt="Custom work photo 3">
+          <img class="slide-img" src="images/custom_4.jpg" alt="Custom work photo 4">
+        </div>
+
+        <button class="slide-btn next" type="button" aria-label="Next image">›</button>
+      </div>
+
+      <p class="muted">Unique one-off projects and special requests.</p>
+    </div>
   </div>
-</button>
-```
-
-  </div>
-</main>
-
-<!-- ================= WOOD ================= -->
-
-<div id="lb-wood" class="lightbox">
-  <div class="lightbox-content">
-    <button class="lightbox-close">×</button>
-    <h3>Woodworking</h3>
-
-```
-<div class="lightbox-slider">
-  <button class="slide-btn prev">‹</button>
-  <div class="slide-frame">
-    <img class="slide-img is-active" src="images/wood_1.jpg">
-    <img class="slide-img" src="images/wood_2.jpg">
-    <img class="slide-img" src="images/wood_3.jpg">
-    <img class="slide-img" src="images/wood_4.jpg">
-    <img class="slide-img" src="images/wood_5.jpg">
-    <img class="slide-img" src="images/wood_6.jpg">
-    <img class="slide-img" src="images/wood_7.jpg">
-    <img class="slide-img" src="images/wood_8.jpg">
-    <img class="slide-img" src="images/wood_9.jpg">
-    <img class="slide-img" src="images/wood_10.jpg">
-    <img class="slide-img" src="images/wood_11.jpg">
-    <img class="slide-img" src="images/wood_12.jpg">
-  </div>
-  <button class="slide-btn next">›</button>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- ================= TUMBLERS ================= -->
-
-<div id="lb-tumblers" class="lightbox">
-  <div class="lightbox-content">
-    <button class="lightbox-close">×</button>
-    <h3>Tumblers & Drinkware</h3>
-
-```
-<div class="lightbox-slider">
-  <button class="slide-btn prev">‹</button>
-  <div class="slide-frame">
-    <img class="slide-img is-active" src="images/tumblers_1.jpg">
-    <img class="slide-img" src="images/tumblers_2.jpg">
-    <img class="slide-img" src="images/tumblers_3.jpg">
-    <img class="slide-img" src="images/tumblers_4.jpg">
-    <img class="slide-img" src="images/tumblers_5.jpg">
-    <img class="slide-img" src="images/tumblers_6.jpg">
-    <img class="slide-img" src="images/tumblers_7.jpg">
-    <img class="slide-img" src="images/tumblers_8.jpg">
-  </div>
-  <button class="slide-btn next">›</button>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- ================= 3D PRINTS ================= -->
-
-<div id="lb-prints" class="lightbox">
-  <div class="lightbox-content">
-    <button class="lightbox-close">×</button>
-    <h3>3D Prints</h3>
-
-```
-<div class="lightbox-slider">
-  <button class="slide-btn prev">‹</button>
-  <div class="slide-frame">
-    <img class="slide-img is-active" src="images/3dprints_1.jpg">
-    <img class="slide-img" src="images/3dprints_2.jpg">
-    <img class="slide-img" src="images/3dprints_3.jpg">
-    <img class="slide-img" src="images/3dprints_4.jpg">
-    <img class="slide-img" src="images/3dprints_5.jpg">
-    <img class="slide-img" src="images/3dprints_6.jpg">
-  </div>
-  <button class="slide-btn next">›</button>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- ================= METAL ================= -->
-
-<div id="lb-metal" class="lightbox">
-  <div class="lightbox-content">
-    <button class="lightbox-close">×</button>
-    <h3>Metal / Wind Spinners</h3>
-
-```
-<div class="lightbox-slider">
-  <button class="slide-btn prev">‹</button>
-  <div class="slide-frame">
-    <img class="slide-img is-active" src="images/metal_1.jpg">
-    <img class="slide-img" src="images/metal_2.jpg">
-    <img class="slide-img" src="images/metal_3.jpg">
-    <img class="slide-img" src="images/metal_4.jpg">
-    <img class="slide-img" src="images/metal_5.jpg">
-    <img class="slide-img" src="images/metal_6.jpg">
-  </div>
-  <button class="slide-btn next">›</button>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- ================= DOOR HANGERS ================= -->
-
-<div id="lb-door" class="lightbox">
-  <div class="lightbox-content">
-    <button class="lightbox-close">×</button>
-    <h3>Door Hangers</h3>
-
-```
-<div class="lightbox-slider">
-  <button class="slide-btn prev">‹</button>
-  <div class="slide-frame">
-    <img class="slide-img is-active" src="images/door_hanger_1.jpg">
-    <img class="slide-img" src="images/door_hanger_2.jpg">
-    <img class="slide-img" src="images/door_hanger_3.jpg">
-  </div>
-  <button class="slide-btn next">›</button>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- ================= CUSTOM ================= -->
-
-<div id="lb-custom" class="lightbox">
-  <div class="lightbox-content">
-    <button class="lightbox-close">×</button>
-    <h3>Custom Work</h3>
-
-```
-<div class="lightbox-slider">
-  <button class="slide-btn prev">‹</button>
-  <div class="slide-frame">
-    <img class="slide-img is-active" src="images/custom_1.jpg">
-    <img class="slide-img" src="images/custom_2.jpg">
-    <img class="slide-img" src="images/custom_3.jpg">
-    <img class="slide-img" src="images/custom_4.jpg">
-  </div>
-  <button class="slide-btn next">›</button>
-</div>
-```
-
-  </div>
-</div>
-
-<script src="js/portfolio.js"></script>
 
 </body>
 </html>
