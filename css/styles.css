@@ -341,3 +341,23 @@ body.no-scroll{ overflow: hidden; }
 
   .slide-frame{ height: 320px; }
 }
+/* ===== CLICK-PROOF HEADER FIX ===== */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+}
+
+/* keep page content below header in stacking order */
+.page,
+.hero,
+.home-section{
+  position: relative;
+  z-index: 0;
+}
+
+/* make sure header links always receive clicks */
+.site-header,
+.site-header *{
+  pointer-events: auto;
+}
