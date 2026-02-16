@@ -14,13 +14,13 @@
   </script>
 
   <title>A Country Touch | Portfolio</title>
-  <meta name="description" content="Browse examples of our work — woodworking, tumblers, 3D prints, door hangers, custom work, and metal wind spinners." />
+  <meta name="description"
+        content="Browse examples of our work — woodworking, tumblers, 3D prints, metal spinners, door hangers, and custom work." />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-
   <header class="site-header">
     <h1>A Country Touch</h1>
 
@@ -43,15 +43,15 @@
 
       <button class="portfolio-link" type="button" data-gallery="wood">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/wood_1.jpg" alt="Woodworking">
+          <img class="card-thumb" src="images/wood_1.jpg" alt="Woodworking example">
           <h3>Woodworking</h3>
-          <p>Benches, tables, flags, clocks, and custom builds.</p>
+          <p>Benches, tables, flags, clocks, decor, and custom builds.</p>
         </div>
       </button>
 
       <button class="portfolio-link" type="button" data-gallery="tumblers">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/tumblers_1.jpg" alt="Tumblers & Drinkware">
+          <img class="card-thumb" src="images/tumblers_1.jpg" alt="Tumblers example">
           <h3>Tumblers & Drinkware</h3>
           <p>Custom tumblers, mugs, and themed designs.</p>
         </div>
@@ -59,15 +59,15 @@
 
       <button class="portfolio-link" type="button" data-gallery="prints">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/3dprints_1.jpg" alt="3D Prints">
+          <img class="card-thumb" src="images/3dprints_1.jpg" alt="3D print example">
           <h3>3D Prints</h3>
-          <p>3D printed designs and lithophanes.</p>
+          <p>3D prints, lithophanes, and custom pieces.</p>
         </div>
       </button>
 
       <button class="portfolio-link" type="button" data-gallery="metal">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/metal_1.jpg" alt="Metal / Wind Spinners">
+          <img class="card-thumb" src="images/metal_1.jpg" alt="Metal spinner example">
           <h3>Metal / Wind Spinners</h3>
           <p>Metal spinners and engraved pieces.</p>
         </div>
@@ -75,7 +75,7 @@
 
       <button class="portfolio-link" type="button" data-gallery="door">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/door_hanger_1.jpg" alt="Door Hangers">
+          <img class="card-thumb" src="images/door_hanger_1.jpg" alt="Door hanger example">
           <h3>Door Hangers</h3>
           <p>Seasonal and custom door signs.</p>
         </div>
@@ -83,7 +83,7 @@
 
       <button class="portfolio-link" type="button" data-gallery="custom">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/custom_1.jpg" alt="Custom Work">
+          <img class="card-thumb" src="images/custom_1.jpg" alt="Custom work example">
           <h3>Custom Work</h3>
           <p>One-of-a-kind builds and special projects.</p>
         </div>
@@ -92,12 +92,8 @@
     </div>
   </main>
 
-  <!-- Dynamic lightbox mount point -->
+  <!-- Lightbox mounts here -->
   <div id="lightbox-root"></div>
-
-  <!-- Scripts (order matters) -->
-  <script src="js/gallery-data.js"></script>
-  <script src="js/portfolio.js"></script>
 
   <script>
     // Mobile menu toggle
@@ -112,6 +108,10 @@
       });
     }
   </script>
+
+  <!-- IMPORTANT: load data FIRST, then logic -->
+  <script src="js/gallery_data.js"></script>
+  <script src="js/portfolio.js"></script>
 
 </body>
 </html>

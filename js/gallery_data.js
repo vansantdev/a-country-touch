@@ -3,8 +3,7 @@
 // Josh — only edit THIS file when adding photos
 // =========================
 
-const GALLERY = {
-
+window.GALLERY = {
   wood: [
     "wood_1.jpg",
     "wood_2.jpg",
@@ -61,5 +60,4 @@ const GALLERY = {
     "custom_3.jpg",
     "custom_4.jpg"
   ]
-
 };

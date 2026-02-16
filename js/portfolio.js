@@ -1,12 +1,11 @@
 // js/portfolio.js
-// Works with gallery-data.js (GALLERY object)
+// Works with gallery_data.js (window.GALLERY)
 // Builds a lightbox on the fly and wires arrows / close.
 
 (function () {
   const root = document.getElementById("lightbox-root");
   if (!root) return;
 
-  // Titles + descriptions for each gallery key
   const META = {
     wood: {
       title: "Woodworking",
@@ -65,7 +64,6 @@
   const prevBtn = lb.querySelector(".prev");
   const nextBtn = lb.querySelector(".next");
 
-  let images = [];
   let index = 0;
 
   function renderImages(list) {
@@ -92,7 +90,9 @@
   }
 
   function open(key) {
-    if (!window.GALLERY || !GALLERY[key] || !GALLERY[key].length) {
+    const gallery = window.GALLERY;
+
+    if (!gallery || !gallery[key] || !gallery[key].length) {
       alert("No images found for this category yet.");
       return;
     }
@@ -101,10 +101,7 @@
     titleEl.textContent = meta.title;
     descEl.textContent = meta.desc;
 
-    images = GALLERY[key];
-    index = 0;
-
-    renderImages(images);
+    renderImages(gallery[key]);
 
     lb.classList.add("open");
     lb.setAttribute("aria-hidden", "false");
@@ -118,7 +115,6 @@
     lb.setAttribute("aria-hidden", "true");
     document.body.classList.remove("no-scroll");
     frame.innerHTML = "";
-    images = [];
     index = 0;
   }
 
