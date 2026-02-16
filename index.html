@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0LCH8S34B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-G0LCH8S34B');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0LCH8S34B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-G0LCH8S34B');
+  </script>
+
   <title>A Country Touch | Custom Woodworking, Tumblers & 3D Printing</title>
   <meta name="description"
         content="A Country Touch creates custom handmade items to give your home a cozy country touch. Woodworking, furniture, signs, tumblers, and 3D prints made to order." />
@@ -21,6 +22,8 @@
   <meta property="og:description" content="Handcrafted items to give your home a cozy country touch — woodworking, furniture, signs, tumblers, and 3D prints." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vansantdev.github.io/a-country-touch/" />
+  <!-- Optional but recommended: update to a real image that exists -->
+  <meta property="og:image" content="https://vansantdev.github.io/a-country-touch/images/wood_1.jpg" />
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -86,25 +89,25 @@
 
       <div class="home-grid">
         <div class="home-card">
-          <img src="images/woodcustomtable.jpg" alt="Custom woodworking" class="home-img">
+          <img src="images/wood_1.jpg" alt="Custom woodworking" class="home-img" loading="lazy">
           <h4>Woodworking</h4>
           <p class="muted">Benches, tables, flags, decor, and epoxy pieces.</p>
         </div>
 
         <div class="home-card">
-          <img src="images/multitumblers.jpg" alt="Custom tumblers" class="home-img">
+          <img src="images/tumblers_1.jpg" alt="Custom tumblers" class="home-img" loading="lazy">
           <h4>Tumblers & Drinkware</h4>
           <p class="muted">Personalized tumblers and mugs with names, colors, and designs.</p>
         </div>
 
         <div class="home-card">
-          <img src="images/3dcolorlithopanes.jpg" alt="3D prints and lithophanes" class="home-img">
+          <img src="images/3dprints_1.jpg" alt="3D prints and lithophanes" class="home-img" loading="lazy">
           <h4>3D Prints</h4>
           <p class="muted">Custom prints, display pieces, lithophanes, and unique gifts.</p>
         </div>
 
         <div class="home-card">
-          <img src="images/americaspinner.jpg" alt="Metal wind spinner" class="home-img">
+          <img src="images/metal_1.jpg" alt="Metal wind spinners" class="home-img" loading="lazy">
           <h4>Metal / Wind Spinners</h4>
           <p class="muted">Metal spinners and custom designs (more coming soon).</p>
         </div>
@@ -152,11 +155,10 @@
       <p class="muted">A quick peek — see the full galleries on our Portfolio page.</p>
 
       <div class="featured-grid">
-      <img src="images/wood_1.jpg" alt="Custom woodworking" loading="lazy">
-<img src="images/tumblers_1.jpg" alt="Custom tumblers" loading="lazy">
-<img src="images/3dprints_1.jpg" alt="3D prints and lithophanes" loading="lazy">
-<img src="images/metal_1.jpg" alt="Metal wind spinners" loading="lazy">
-
+        <img class="featured-img" src="images/wood_2.jpg" alt="Featured woodworking" loading="lazy">
+        <img class="featured-img" src="images/tumblers_2.jpg" alt="Featured tumblers" loading="lazy">
+        <img class="featured-img" src="images/3dprints_2.jpg" alt="Featured 3D prints" loading="lazy">
+        <img class="featured-img" src="images/metal_2.jpg" alt="Featured metal wind spinners" loading="lazy">
       </div>
 
       <div class="home-cta">
