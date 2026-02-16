@@ -14,90 +14,76 @@
   </script>
 
   <title>A Country Touch | Portfolio</title>
-  <meta name="description"
-        content="Browse examples of our work — woodworking, tumblers, 3D prints, and metal spinners from A Country Touch." />
+  <meta name="description" content="Browse examples of our work — woodworking, tumblers, 3D prints, door hangers, custom work, and metal wind spinners." />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-       ========================= -->
   <header class="site-header">
-  <h1>A Country Touch</h1>
+    <h1>A Country Touch</h1>
 
-  <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-  <nav class="nav-menu" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="order.html">Custom Order</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-
-  <!-- =========================
-       MAIN
-       ========================= -->
   <main class="page">
     <h2>Our Work</h2>
     <p class="muted">Click a category to view examples.</p>
 
     <div class="portfolio-grid">
 
-      <!-- WOOD -->
-      <button class="portfolio-link" data-open="lb-wood">
+      <button class="portfolio-link" type="button" data-gallery="wood">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/wood_1.jpg" alt="Woodworking example">
+          <img class="card-thumb" src="images/wood_1.jpg" alt="Woodworking">
           <h3>Woodworking</h3>
           <p>Benches, tables, flags, clocks, and custom builds.</p>
         </div>
       </button>
 
-      <!-- TUMBLERS -->
-      <button class="portfolio-link" data-open="lb-tumblers">
+      <button class="portfolio-link" type="button" data-gallery="tumblers">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/tumblers_1.jpg" alt="Tumblers example">
+          <img class="card-thumb" src="images/tumblers_1.jpg" alt="Tumblers & Drinkware">
           <h3>Tumblers & Drinkware</h3>
           <p>Custom tumblers, mugs, and themed designs.</p>
         </div>
       </button>
 
-      <!-- 3D PRINTS -->
-      <button class="portfolio-link" data-open="lb-prints">
+      <button class="portfolio-link" type="button" data-gallery="prints">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/3dprints_1.jpg" alt="3D prints example">
+          <img class="card-thumb" src="images/3dprints_1.jpg" alt="3D Prints">
           <h3>3D Prints</h3>
           <p>3D printed designs and lithophanes.</p>
         </div>
       </button>
 
-      <!-- METAL -->
-      <button class="portfolio-link" data-open="lb-metal">
+      <button class="portfolio-link" type="button" data-gallery="metal">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/metal_1.jpg" alt="Metal example">
+          <img class="card-thumb" src="images/metal_1.jpg" alt="Metal / Wind Spinners">
           <h3>Metal / Wind Spinners</h3>
           <p>Metal spinners and engraved pieces.</p>
         </div>
       </button>
 
-      <!-- DOOR HANGERS -->
-      <button class="portfolio-link" data-open="lb-door">
+      <button class="portfolio-link" type="button" data-gallery="door">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/door_hanger_1.jpg" alt="Door hanger example">
+          <img class="card-thumb" src="images/door_hanger_1.jpg" alt="Door Hangers">
           <h3>Door Hangers</h3>
           <p>Seasonal and custom door signs.</p>
         </div>
       </button>
 
-      <!-- CUSTOM WORK -->
-      <button class="portfolio-link" data-open="lb-custom">
+      <button class="portfolio-link" type="button" data-gallery="custom">
         <div class="portfolio-item">
-          <img class="card-thumb" src="images/custom_1.jpg" alt="Custom work example">
+          <img class="card-thumb" src="images/custom_1.jpg" alt="Custom Work">
           <h3>Custom Work</h3>
           <p>One-of-a-kind builds and special projects.</p>
         </div>
@@ -106,35 +92,26 @@
     </div>
   </main>
 
-  <!-- =========================
-       LIGHTBOX TEMPLATE
-       ========================= -->
-  <div id="lightbox-template" style="display:none;">
-    <div class="lightbox">
-      <div class="lightbox-content">
-        <button class="lightbox-close">×</button>
-        <h3 class="lb-title"></h3>
+  <!-- Dynamic lightbox mount point -->
+  <div id="lightbox-root"></div>
 
-        <div class="lightbox-slider">
-          <button class="slide-btn prev">‹</button>
-
-          <div class="slide-frame">
-            <!-- images injected by JS -->
-          </div>
-
-          <button class="slide-btn next">›</button>
-        </div>
-
-        <p class="lb-desc muted"></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================
-       SCRIPTS (ORDER MATTERS)
-       ========================= -->
+  <!-- Scripts (order matters) -->
   <script src="js/gallery-data.js"></script>
   <script src="js/portfolio.js"></script>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-menu');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+      });
+    }
+  </script>
 
 </body>
 </html>
